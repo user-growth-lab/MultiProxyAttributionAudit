@@ -1,0 +1,670 @@
+{
+  "artifact_type": "amazon_aggregate_results",
+  "compatible_coverage_exact": [
+    {
+      "abstention_rate": 0.9947142857142857,
+      "clopper_pearson_95_interval": [
+        0.947069064214555,
+        0.9721228512046636
+      ],
+      "contamination_budget_r": 0,
+      "coverage": 0.961,
+      "covered_users": 961,
+      "eligible_coordinates": 5270,
+      "eligible_sign_decisions": 34,
+      "empty_set_rate": 0.0,
+      "sign_decision_rate": 0.005285714285714286,
+      "target": "Pop",
+      "users": 1000,
+      "wrong_eligible_sign_decisions": 8
+    },
+    {
+      "abstention_rate": 1.0,
+      "clopper_pearson_95_interval": [
+        0.9963179161031344,
+        1.0
+      ],
+      "contamination_budget_r": 1,
+      "coverage": 1.0,
+      "covered_users": 1000,
+      "eligible_coordinates": 5270,
+      "eligible_sign_decisions": 0,
+      "empty_set_rate": 0.0,
+      "sign_decision_rate": 0.0,
+      "target": "Pop",
+      "users": 1000,
+      "wrong_eligible_sign_decisions": null
+    },
+    {
+      "abstention_rate": 0.9934285714285714,
+      "clopper_pearson_95_interval": [
+        0.9334865384050652,
+        0.9617947632253139
+      ],
+      "contamination_budget_r": 0,
+      "coverage": 0.949,
+      "covered_users": 949,
+      "eligible_coordinates": 5231,
+      "eligible_sign_decisions": 34,
+      "empty_set_rate": 0.0005714285714285715,
+      "sign_decision_rate": 0.006,
+      "target": "Rock",
+      "users": 1000,
+      "wrong_eligible_sign_decisions": 22
+    },
+    {
+      "abstention_rate": 1.0,
+      "clopper_pearson_95_interval": [
+        0.9963179161031344,
+        1.0
+      ],
+      "contamination_budget_r": 1,
+      "coverage": 1.0,
+      "covered_users": 1000,
+      "eligible_coordinates": 5231,
+      "eligible_sign_decisions": 0,
+      "empty_set_rate": 0.0,
+      "sign_decision_rate": 0.0,
+      "target": "Rock",
+      "users": 1000,
+      "wrong_eligible_sign_decisions": null
+    },
+    {
+      "abstention_rate": 0.9854285714285714,
+      "clopper_pearson_95_interval": [
+        0.9178989300786289,
+        0.949479690310382
+      ],
+      "contamination_budget_r": 0,
+      "coverage": 0.935,
+      "covered_users": 935,
+      "eligible_coordinates": 5310,
+      "eligible_sign_decisions": 95,
+      "empty_set_rate": 0.00042857142857142855,
+      "sign_decision_rate": 0.014142857142857143,
+      "target": "Jazz",
+      "users": 1000,
+      "wrong_eligible_sign_decisions": 25
+    },
+    {
+      "abstention_rate": 0.9984285714285714,
+      "clopper_pearson_95_interval": [
+        0.9816867569448875,
+        0.9951944893089507
+      ],
+      "contamination_budget_r": 1,
+      "coverage": 0.99,
+      "covered_users": 990,
+      "eligible_coordinates": 5310,
+      "eligible_sign_decisions": 11,
+      "empty_set_rate": 0.0,
+      "sign_decision_rate": 0.0015714285714285715,
+      "target": "Jazz",
+      "users": 1000,
+      "wrong_eligible_sign_decisions": 1
+    },
+    {
+      "abstention_rate": 0.9931428571428571,
+      "clopper_pearson_95_interval": [
+        0.9402471673065922,
+        0.9669903745688513
+      ],
+      "contamination_budget_r": 0,
+      "coverage": 0.955,
+      "covered_users": 955,
+      "eligible_coordinates": 5258,
+      "eligible_sign_decisions": 46,
+      "empty_set_rate": 0.0,
+      "sign_decision_rate": 0.006857142857142857,
+      "target": "Country",
+      "users": 1000,
+      "wrong_eligible_sign_decisions": 24
+    },
+    {
+      "abstention_rate": 1.0,
+      "clopper_pearson_95_interval": [
+        0.9963179161031344,
+        1.0
+      ],
+      "contamination_budget_r": 1,
+      "coverage": 1.0,
+      "covered_users": 1000,
+      "eligible_coordinates": 5258,
+      "eligible_sign_decisions": 0,
+      "empty_set_rate": 0.0,
+      "sign_decision_rate": 0.0,
+      "target": "Country",
+      "users": 1000,
+      "wrong_eligible_sign_decisions": null
+    }
+  ],
+  "dataset": {
+    "name": "Amazon Reviews 2023",
+    "source_data_included": false,
+    "source_url": "https://amazon-reviews-2023.github.io/",
+    "subset": "CDs_and_Vinyl"
+  },
+  "definitions": {
+    "coverage_interval": "two-sided 95% Clopper-Pearson binomial interval",
+    "empty_profile_binary_mapping": "indicator(target in parsed_profile); an empty parsed profile maps to zero for every target and remains in its assigned formal role",
+    "point_method_level": "mean user-level frozen DNAE or CSE loss; lower is better",
+    "primary_absolute_level": "mean user-level frozen primary loss",
+    "relative_reduction": "(behavior_mean-median_mean)/behavior_mean"
+  },
+  "evidence_boundary": {
+    "complete_human_readable_tables_in_technical_appendix": true,
+    "observable_comparator_not_latent_ground_truth": true,
+    "selected_machine_readable_aggregates": true,
+    "user_level_source_or_derived_records_included": false
+  },
+  "llm_empty_profile_audit": [
+    {
+      "empty_profiles": 1205,
+      "expected_records": 5000,
+      "model": "qwen",
+      "repair_requests": 2082,
+      "successful_records": 5000,
+      "target_negative_label_audit": {
+        "Country": {
+          "all_negative_labels": 4150,
+          "empty_profiles": 1205,
+          "empty_share_of_negative_labels": 0.29036144578313255
+        },
+        "Jazz": {
+          "all_negative_labels": 4443,
+          "empty_profiles": 1205,
+          "empty_share_of_negative_labels": 0.27121314427188836
+        },
+        "Pop": {
+          "all_negative_labels": 2585,
+          "empty_profiles": 1205,
+          "empty_share_of_negative_labels": 0.4661508704061896
+        },
+        "Rock": {
+          "all_negative_labels": 3062,
+          "empty_profiles": 1205,
+          "empty_share_of_negative_labels": 0.39353363814500325
+        }
+      }
+    },
+    {
+      "empty_profiles": 1172,
+      "expected_records": 5000,
+      "model": "llama",
+      "repair_requests": 1834,
+      "successful_records": 5000,
+      "target_negative_label_audit": {
+        "Country": {
+          "all_negative_labels": 3865,
+          "empty_profiles": 1172,
+          "empty_share_of_negative_labels": 0.30323415265200515
+        },
+        "Jazz": {
+          "all_negative_labels": 4124,
+          "empty_profiles": 1172,
+          "empty_share_of_negative_labels": 0.28419010669253153
+        },
+        "Pop": {
+          "all_negative_labels": 1798,
+          "empty_profiles": 1172,
+          "empty_share_of_negative_labels": 0.6518353726362626
+        },
+        "Rock": {
+          "all_negative_labels": 2069,
+          "empty_profiles": 1172,
+          "empty_share_of_negative_labels": 0.5664572257129048
+        }
+      }
+    }
+  ],
+  "point_method_descriptive_inventory": {
+    "inference": "none; point estimates only",
+    "rows": [
+      {
+        "cse_mean": 0.34125714285714265,
+        "dnae_mean": 0.13964754204586116,
+        "method_id": "behavior_only",
+        "target": "Pop",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.3476285714285708,
+        "dnae_mean": 0.13448734551794403,
+        "method_id": "qwen_only",
+        "target": "Pop",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.3563952380952379,
+        "dnae_mean": 0.16540347839953398,
+        "method_id": "llama_only",
+        "target": "Pop",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.3026785714285704,
+        "dnae_mean": 0.1335590088273801,
+        "method_id": "rating_only",
+        "target": "Pop",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.29714523809523735,
+        "dnae_mean": 0.12669451825722447,
+        "method_id": "k3_mean_unscaled",
+        "target": "Pop",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.3068309523809518,
+        "dnae_mean": 0.12909734733026346,
+        "method_id": "k3_median_unscaled",
+        "target": "Pop",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.34125714285714265,
+        "dnae_mean": 0.13964754204586116,
+        "method_id": "behavior_calibrated",
+        "target": "Pop",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.3068309523809518,
+        "dnae_mean": 0.12916133008442868,
+        "method_id": "k3_median_calibrated",
+        "target": "Pop",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.3020166666666659,
+        "dnae_mean": 0.12966993788647824,
+        "method_id": "k3_label_majority",
+        "target": "Pop",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.28786666666666555,
+        "dnae_mean": 0.12529288035428454,
+        "method_id": "k4_descriptive",
+        "target": "Pop",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.4151571428571419,
+        "dnae_mean": 0.17220346247051582,
+        "method_id": "behavior_only",
+        "target": "Rock",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.3510999999999993,
+        "dnae_mean": 0.17241978674684597,
+        "method_id": "qwen_only",
+        "target": "Rock",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.43793809523809474,
+        "dnae_mean": 0.19410629899682605,
+        "method_id": "llama_only",
+        "target": "Rock",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.43029285714285714,
+        "dnae_mean": 0.17851100088951355,
+        "method_id": "rating_only",
+        "target": "Rock",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.34549285714285627,
+        "dnae_mean": 0.16738933783705753,
+        "method_id": "k3_mean_unscaled",
+        "target": "Rock",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.36109761904761867,
+        "dnae_mean": 0.17091459578131515,
+        "method_id": "k3_median_unscaled",
+        "target": "Rock",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.4151571428571419,
+        "dnae_mean": 0.17220346247051582,
+        "method_id": "behavior_calibrated",
+        "target": "Rock",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.36109761904761867,
+        "dnae_mean": 0.1722307519121249,
+        "method_id": "k3_median_calibrated",
+        "target": "Rock",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.37392619047618947,
+        "dnae_mean": 0.1770440435762304,
+        "method_id": "k3_label_majority",
+        "target": "Rock",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.36579999999999946,
+        "dnae_mean": 0.1651565741660086,
+        "method_id": "k4_descriptive",
+        "target": "Rock",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.35601904761904696,
+        "dnae_mean": 0.15205875426951126,
+        "method_id": "behavior_only",
+        "target": "Jazz",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.35547142857142777,
+        "dnae_mean": 0.15824553972617944,
+        "method_id": "qwen_only",
+        "target": "Jazz",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.36508809523809466,
+        "dnae_mean": 0.16478361380255138,
+        "method_id": "llama_only",
+        "target": "Jazz",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.34561428571428493,
+        "dnae_mean": 0.14945803566963997,
+        "method_id": "rating_only",
+        "target": "Jazz",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.317411904761904,
+        "dnae_mean": 0.14882096705535605,
+        "method_id": "k3_mean_unscaled",
+        "target": "Jazz",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.3198976190476182,
+        "dnae_mean": 0.14927062226855664,
+        "method_id": "k3_median_unscaled",
+        "target": "Jazz",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.35601904761904696,
+        "dnae_mean": 0.15205875426951126,
+        "method_id": "behavior_calibrated",
+        "target": "Jazz",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.3198976190476182,
+        "dnae_mean": 0.1487769479269436,
+        "method_id": "k3_median_calibrated",
+        "target": "Jazz",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.3487928571428566,
+        "dnae_mean": 0.1524568812445028,
+        "method_id": "k3_label_majority",
+        "target": "Jazz",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.31390714285714233,
+        "dnae_mean": 0.1439350582442222,
+        "method_id": "k4_descriptive",
+        "target": "Jazz",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.3262761904761896,
+        "dnae_mean": 0.1476718675644847,
+        "method_id": "behavior_only",
+        "target": "Country",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.2891523809523801,
+        "dnae_mean": 0.14086788611072099,
+        "method_id": "qwen_only",
+        "target": "Country",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.38911428571428536,
+        "dnae_mean": 0.1761597092749951,
+        "method_id": "llama_only",
+        "target": "Country",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.3009214285714276,
+        "dnae_mean": 0.14413812746904064,
+        "method_id": "rating_only",
+        "target": "Country",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.31446666666666634,
+        "dnae_mean": 0.14261175714526694,
+        "method_id": "k3_mean_unscaled",
+        "target": "Country",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.30520238095238056,
+        "dnae_mean": 0.1435655082064709,
+        "method_id": "k3_median_unscaled",
+        "target": "Country",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.3262761904761896,
+        "dnae_mean": 0.14767186756448472,
+        "method_id": "behavior_calibrated",
+        "target": "Country",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.30520238095238056,
+        "dnae_mean": 0.14291819053767793,
+        "method_id": "k3_median_calibrated",
+        "target": "Country",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.3335238095238085,
+        "dnae_mean": 0.15078978312944144,
+        "method_id": "k3_label_majority",
+        "target": "Country",
+        "users": 1000
+      },
+      {
+        "cse_mean": 0.2864380952380946,
+        "dnae_mean": 0.13829104843903786,
+        "method_id": "k4_descriptive",
+        "target": "Country",
+        "users": 1000
+      }
+    ],
+    "selection_rule": "all ten frozen methods with numeric DNAE and CSE; the compatible-target-set entry is excluded because it is not a point method"
+  },
+  "primary_absolute_levels": [
+    {
+      "behavior_mean": 0.13964754204586116,
+      "bonferroni_interval": [
+        -0.013832243342490015,
+        -0.007355132191964622
+      ],
+      "effect": -0.010550194715597705,
+      "losses": 367,
+      "median_mean": 0.12909734733026346,
+      "metric_id": "dnae",
+      "ordinary_interval": [
+        -0.012926728016776527,
+        -0.008182241357041745
+      ],
+      "relative_reduction": 0.07554873190774065,
+      "target": "Pop",
+      "ties": 0,
+      "users": 1000,
+      "wins": 633
+    },
+    {
+      "behavior_mean": 0.34125714285714265,
+      "bonferroni_interval": [
+        -0.051264962797619044,
+        -0.016672805059523902
+      ],
+      "effect": -0.03442619047619083,
+      "losses": 220,
+      "median_mean": 0.3068309523809518,
+      "metric_id": "cse",
+      "ordinary_interval": [
+        -0.046231190476190474,
+        -0.022039940476190484
+      ],
+      "relative_reduction": 0.10088049787899195,
+      "target": "Pop",
+      "ties": 404,
+      "users": 1000,
+      "wins": 376
+    },
+    {
+      "behavior_mean": 0.17220346247051582,
+      "bonferroni_interval": [
+        -0.005521588238240069,
+        0.0029557152411253964
+      ],
+      "effect": -0.0012888666892006684,
+      "losses": 465,
+      "median_mean": 0.17091459578131515,
+      "metric_id": "dnae",
+      "ordinary_interval": [
+        -0.004306393949014526,
+        0.0017516341528004554
+      ],
+      "relative_reduction": 0.007484557341123988,
+      "target": "Rock",
+      "ties": 1,
+      "users": 1000,
+      "wins": 534
+    },
+    {
+      "behavior_mean": 0.4151571428571419,
+      "bonferroni_interval": [
+        -0.07324653273809523,
+        -0.03493982886904763
+      ],
+      "effect": -0.054059523809523224,
+      "losses": 238,
+      "median_mean": 0.36109761904761867,
+      "metric_id": "cse",
+      "ordinary_interval": [
+        -0.0676952380952381,
+        -0.0401402380952381
+      ],
+      "relative_reduction": 0.13021460605851948,
+      "target": "Rock",
+      "ties": 354,
+      "users": 1000,
+      "wins": 408
+    },
+    {
+      "behavior_mean": 0.15205875426951126,
+      "bonferroni_interval": [
+        -0.006614521696206774,
+        0.001089972987318064
+      ],
+      "effect": -0.002788132000954624,
+      "losses": 468,
+      "median_mean": 0.14927062226855664,
+      "metric_id": "dnae",
+      "ordinary_interval": [
+        -0.005578333385828095,
+        2.679871710618581e-05
+      ],
+      "relative_reduction": 0.01833588611421146,
+      "target": "Jazz",
+      "ties": 5,
+      "users": 1000,
+      "wins": 527
+    },
+    {
+      "behavior_mean": 0.35601904761904696,
+      "bonferroni_interval": [
+        -0.0535610863095238,
+        -0.018817224702380963
+      ],
+      "effect": -0.03612142857142875,
+      "losses": 199,
+      "median_mean": 0.3198976190476182,
+      "metric_id": "cse",
+      "ordinary_interval": [
+        -0.04831458333333334,
+        -0.02367821428571429
+      ],
+      "relative_reduction": 0.10145925846664239,
+      "target": "Jazz",
+      "ties": 472,
+      "users": 1000,
+      "wins": 329
+    },
+    {
+      "behavior_mean": 0.1476718675644847,
+      "bonferroni_interval": [
+        -0.007408189598572316,
+        -0.0006116505161866307
+      ],
+      "effect": -0.004106359358013789,
+      "losses": 444,
+      "median_mean": 0.1435655082064709,
+      "metric_id": "dnae",
+      "ordinary_interval": [
+        -0.006509732210112235,
+        -0.0016358828978347462
+      ],
+      "relative_reduction": 0.027807323261626948,
+      "target": "Country",
+      "ties": 4,
+      "users": 1000,
+      "wins": 552
+    },
+    {
+      "behavior_mean": 0.3262761904761896,
+      "bonferroni_interval": [
+        -0.036931755952380955,
+        -0.005285885416666764
+      ],
+      "effect": -0.02107380952380905,
+      "losses": 218,
+      "median_mean": 0.30520238095238056,
+      "metric_id": "cse",
+      "ordinary_interval": [
+        -0.032364345238095234,
+        -0.00979261904761905
+      ],
+      "relative_reduction": 0.06458886715899344,
+      "target": "Country",
+      "ties": 462,
+      "users": 1000,
+      "wins": 320
+    }
+  ],
+  "protocol_id": "WSDM27-AMAZON-TEMPORAL-v0.2",
+  "schema_version": 1
+}
