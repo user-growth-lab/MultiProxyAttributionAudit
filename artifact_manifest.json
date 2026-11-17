@@ -42,7 +42,7 @@
     "verify_repository.py"
   ],
   "artifact_type": "wsdm27_anonymous_repository_snapshot",
-  "build_version": "wsdm27-anonymous-repository-v2.0",
+  "build_version": "MultiProxyAttributionAudit-v1.0.0",
   "content_scope": {
     "amazon_evidence_aggregate_only": true,
     "amazon_exact_end_to_end_regeneration_supported": false,
@@ -53,10 +53,10 @@
   "file_count": 40,
   "payload_file_count": 38,
   "payload_sha256": {
-    "DATA_ACCESS_AND_RELEASE_BOUNDARY.md": "0bae6649a285864307bc9fc71ce440c29ce7c775eba8fa668f813a1b02212375",
-    "LICENSE": "1d0dde41ece0f9620937f1a81a67e295ace0eae180c009d862006e8f3b288458",
-    "README.md": "f6ad59bd1cd8e8e2493be3a4fd7020460ac30fdd7bf34b636ea1a6005a89738b",
-    "THIRD_PARTY_NOTICES.md": "e170125d7d4ed8c4ac5ff4b0f5f68a14103cc2f1ace94044734d50684f35bced",
+    "DATA_ACCESS_AND_RELEASE_BOUNDARY.md": "d36e0058bfbbab31d56b75e4619c0421896b96397793424c9250aae9bec02275",
+    "LICENSE": "5964d8337e67103aa9c66fca3bb8d488fc4d2acbbf6319effb5281fecf171bef",
+    "README.md": "db3bee863a6bdd733c4dc0a84e984a55a3602b7e0ce33531a8a4ba5c2f54ade3",
+    "THIRD_PARTY_NOTICES.md": "2feb3b6247849a2f7d0cc1d057486e17b549ea0e9146c110577cdc64c3ef7364",
     "aggregate_evidence/amazon/README.md": "3d0d472b74202ca966027887d15cfb5f1408db1c013f623d15c3e8d87d6b3a50",
     "aggregate_evidence/amazon/amazon_aggregate_results.json": "87eae70c2a8f7a8d3b04ce88f93dbd9f21bf6b16ae816bb7830ef9827c125a30",
     "configs/gamma.yaml": "5a350ad65fcf08405fced528e07de023e21c052490dca88a34287e60f24f424a",
@@ -101,6 +101,22 @@
     "raw_human_data_included": false,
     "user_level_human_records_included": false
   },
+  "release": {
+    "authors": [
+      "Yu Zhang",
+      "Zhihan Wang",
+      "Yuhang Lu",
+      "Shuai Li"
+    ],
+    "code_license": "MIT",
+    "corresponding_author": "Zhihan Wang",
+    "paper_doi": "10.1145/3862322.3863442",
+    "paper_title": "Auditing Multi-Proxy Explanations of Web User Preferences: Identification Boundaries and Abstention",
+    "release_url": "https://github.com/user-growth-lab/MultiProxyAttributionAudit/releases/tag/v1.0.0",
+    "repository_url": "https://github.com/user-growth-lab/MultiProxyAttributionAudit",
+    "version": "v1.0.0"
+  },
+  "repository_name": "MultiProxyAttributionAudit",
   "schema_version": 1,
   "scientific_facts": {
     "cohort_separation": {
