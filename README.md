@@ -1,14 +1,27 @@
-# Anonymous Repository: Multi-Proxy Preference Attribution
+# MultiProxyAttributionAudit
 
-This optional repository supports verification of the paper's methods and
-evidence. The paper and its technical appendix are self-contained; no paper
-claim requires a reviewer to execute code or inspect this repository.
+Code and frozen evidence for **Auditing Multi-Proxy Explanations of Web User
+Preferences: Identification Boundaries and Abstention**, accepted at WSDM 2027.
+
+**Authors:** Yu Zhang, Zhihan Wang, Yuhang Lu, and Shuai Li.
+**Corresponding author:** Zhihan Wang.
+
+- Paper DOI: <https://doi.org/10.1145/3862322.3863442>
+- Versioned release: <https://github.com/user-growth-lab/MultiProxyAttributionAudit/releases/tag/v1.0.0>
+
+The paper asks when explanations derived from several observable preference
+proxies support a shared attribution, and when the evidence instead requires
+a compatible set or abstention. This repository supports verification of the
+controlled benchmark and inspection of selected Amazon aggregate evidence.
+The main paper is self-contained: no claim requires a reader to execute code
+or inspect this repository. The included technical appendix preserves the
+original anonymous review version unchanged.
 
 The repository contains:
 
 1. controlled-benchmark source code, tests, public configuration, and frozen
    discovery, confirmation, and sensitivity outputs;
-2. one anonymous technical appendix with complete proofs, extended protocols,
+2. the preserved technical appendix with complete proofs, extended protocols,
    and the full human-readable result tables omitted from the page-limited
    manuscript;
 3. selected machine-readable Amazon aggregate results corresponding to those
@@ -84,11 +97,13 @@ operating systems and numerical-library builds is not asserted.
 ## Evidence boundary
 
 The Amazon source dataset is publicly hosted upstream and is not copied into
-this review bundle. The repository provides selected aggregate results only;
+this release. The repository provides selected aggregate results only;
 it contains no raw reviews, user identifiers, prompts, raw model responses,
 parsed user profiles, user-level labels or attributions, fitted study state, or
 model weights. Consequently, exact end-to-end regeneration of the Amazon
-numbers is not supported by this repository.
+numbers is not supported by this repository. The main-paper PDF and LaTeX
+sources, local Git history, internal reviews, and release-administration records
+are also excluded.
 
 The future-rated surface is an observable comparator, not latent-preference
 ground truth. The LLM views are not assumed clean, and the controlled
